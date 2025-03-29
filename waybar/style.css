@@ -1,0 +1,80 @@
+/* ~/.config/waybar/style.css */
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Hack Nerd Font", monospace;
+  font-size: 13px; /* Adjust as needed */
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(43, 48, 59, 0.5); /* Adjust opacity as needed */
+  color: #ffffff;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#workspaces button.active {
+  background-color: #64727D;
+  border-radius: 10px;
+}
+
+#workspaces button.focused {
+  background-color: #64727D;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727D;
+  border-bottom: 3px solid #ffffff;
+  color: #ffffff;
+  padding: 0 5px;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#tray,
+#battery,
+#custom,
+#pulseaudio,
+#network,
+#wireplumber {
+  padding: 0 10px;
+  color: #ffffff;
+}
+
+#cpu.warning {
+  color: orange;
+}
+
+#cpu.critical {
+  color: red;
+}
+
+#memory.warning {
+  color: orange;
+}
+
+#memory.critical {
+  color: red;
+}
+
+#battery.warning {
+  color: orange;
+}
+
+#battery.critical {
+  color: red;
+}

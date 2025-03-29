@@ -1,0 +1,89 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 24,
+  "spacing": 5,
+  "modules-left": ["hyprland/workspaces","hyprland/submap"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["cpu","memory","network","pulseaudio","clock","tray"],
+  "sway/mode": {
+    "format": "{}"
+  },
+  "sway/window": {
+    "format": "{title}"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "\uf06e",
+      "deactivated": "\uf070"
+    }
+  },
+  "cpu": {
+    "format": "| {usage}% \uf1d1",
+    "tooltip": "CPU Usage: {usage}%",
+    "interval": 10,
+    "states": {
+      "warning": [70, "#ff0000"],
+      "critical": [90, "#ff0000"]
+    },
+    "format-alt": "| {usage}% \uf1d1 ",
+    "format-alt-click": "alacritty -e htop"
+  },
+  "memory": {
+    "format": "| {percentage}% \uf1d0 |",
+    "tooltip": "Memory Usage: {used:0.1f}G / {total:0.1f}G ({percentage}%)",
+    "interval": 10,
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "format-alt": "| {used:0.1f}G {percentage}% Ⲷ |",
+    "format-alt-click": "alacritty -e htop"
+  },
+  "network": {
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": "  \uf0ab:{bandwidthDownBits} \uf0aa:{bandwidthUpBits} ",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\nDown: {bandwidthDownBits}\nUp: {bandwidthUpBits}",
+    "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}\nDown: {bandwidthDownBits}\nUp: {bandwidthUpBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "networkmanager_dmenu",
+    "on-right-click": "alacritty -e nmtui",
+    "interval": 5
+  },
+  "battery": {
+    "bat": "BAT0",
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 5
+    },
+    "format": "BAT0: {capacity}%",
+    "format-charging": "BAT0: {capacity}% (charging)",
+    "format-plugged": "BAT0: {capacity}% (plugged)",
+  },
+  "clock": {
+    "format": "\uf133 {:%Y/%m/%d %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": ["\uf026", "\uf027", "\uf028"]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "format-muted": "\uf00d {volume}%"
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  },
+}

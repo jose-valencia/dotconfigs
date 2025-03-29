@@ -1,0 +1,25 @@
+[global_config]
+  ask_before_closing = never
+[keybindings]
+  cycle_next = <Primary>n
+  cycle_prev = <Primary><Alt>n
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+[profiles]
+  [[default]]
+    background_darkness = 0.94
+    background_type = transparent
+    font = Cantarell 13
+    foreground_color = "#8ff0a4"
+    use_custom_command = True
+    custom_command = /bin/zsh
+    title_transmit_bg_color = "#9a1db2"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

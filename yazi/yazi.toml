@@ -1,0 +1,7 @@
+[manager]
+show_hidden = true
+linemode = "size_and_mtime"
+
+[preview]
+max_width = 1800
+max_height = 1800

@@ -1,0 +1,24 @@
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    font: "monospace 12";
+    lines: 10;
+    columns: 1;
+    location: 0;
+    width: 50;
+    sidebar-mode: false;
+    fallback-icon: "~/Pictures/icon/db1bem4-23857357-8d79-4e10-95b8-2d30f02c8c84.png";
+}
+@theme "Arc-Dark"
+* {
+    background-color: #282a36;
+    border-color: #6272a4;
+    separatorcolor: #44475a;
+    text-color: #f8f8f2;
+    active-text-color: #50fa7b;
+    selected-normal-background: #44475a;
+    selected-normal-foreground: #f8f8f2;
+    selected-active-background: #bd93f9;
+    selected-active-foreground: #282a36;
+}

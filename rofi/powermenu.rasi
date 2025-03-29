@@ -1,0 +1,64 @@
+
+configuration {
+    font: "JetBrains Mono 12, FontAwesome 12";
+    show-icons: true;
+}
+
+* {
+    background:     rgba(16, 16, 16, 85%);
+    foreground:     #FFFFFF;
+    selected:       #FF5555;
+    border:         rgba(255, 255, 255, 20%);
+    border-radius:  10px;
+    padding:        10px;
+}
+
+window {
+    width: 300px;
+    border: 2px;
+    border-color: @border;
+    background-color: @background;
+}
+
+mainbox {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+listview {
+    fixed-height: 0;
+    lines: 7;
+    spacing: 8px;
+    background-color: transparent;
+}
+
+element {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+element normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: #ffffff;
+}
+
+element-icon {
+    font: "FontAwesome 14";
+    size: 24px;
+    background-color: transparent;
+}
+
+prompt {
+    text-color: @foreground;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @foreground;
+}
